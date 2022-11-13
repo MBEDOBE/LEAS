@@ -19,49 +19,43 @@ function validate() {
     return false;
   }
 
-  if (soValue <= '121' || soValue >= '160') {
+  if (soValue <= 121 || soValue >= 160) {
     swal({
       title: 'Patient X Report!',
       text: 'Dr, Emergency!',
       icon: 'warning',
     });
-  } else if (poValue <= '3.5' || poValue >= '5.5') {
+  } else if (poValue <= 3.5 || poValue >= 5.5) {
     swal({
       title: 'Patient X Report!',
       text: 'Dr, Emergency!',
       icon: 'warning',
     });
-  } else if (chloValue <= '94' || chloValue >= '115') {
+  } else if (chloValue <= 94 || chloValue >= 115) {
     swal({
       title: 'Patient X Report!',
       text: 'Dr, Emergency!',
       icon: 'warning',
     });
-  } else if (coValue <= '15' || coValue >= '35') {
+  } else if (coValue <= 15 || coValue >= 35) {
     swal({
       title: 'Patient X Report!',
       text: 'Dr, Emergency!',
       icon: 'warning',
     });
-  } else if (urValue <= '1.0' || urValue >= '7.5') {
+  } else if (urValue <= 1.0 || urValue >= 7.5) {
     swal({
       title: 'Patient X Report!',
       text: 'Dr, Emergency!',
       icon: 'warning',
     });
-  } else if (creValue <= '50' || creValue >= '351') {
+  } else if (creValue <= 50 || creValue >= 351) {
     swal({
       title: 'Patient X Report!',
       text: 'Dr, Emergency!',
       icon: 'warning',
     });
-  } else if (hbValue <= '9') {
-    swal({
-      title: 'Patient X Report!',
-      text: 'Dr, Emergency!',
-      icon: 'warning',
-    });
-  } else if (test <= '9') {
+  } else if (hbValue <= 9) {
     swal({
       title: 'Patient X Report!',
       text: 'Dr, Emergency!',
