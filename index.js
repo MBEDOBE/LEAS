@@ -1,7 +1,7 @@
 function validate() {
   var soValue = document.getElementById('sodium').value;
   var poValue = document.getElementById('potassium').value;
-  var chloValue = document.getElementById('chloride').value;
+  var inr = document.getElementById('inr').value;
   var coValue = document.getElementById('co2').value;
   var urValue = document.getElementById('urea').value;
   var creValue = document.getElementById('creat').value;
@@ -9,7 +9,7 @@ function validate() {
   if (
     (soValue == null || soValue == '',
     poValue == null || poValue == '',
-    chloValue == null || chloValue == '',
+    inr == null || inr == '',
     coValue == null || coValue == '',
     urValue == null || urValue == '',
     creValue == null || creValue == '',
@@ -25,13 +25,13 @@ function validate() {
       text: 'Dr, Emergency!',
       icon: 'warning',
     });
-  } else if (poValue <= 3.5 || poValue >= 5.5) {
+  } else if (poValue <= 3.0 || poValue >= 5.5) {
     swal({
       title: 'Patient X Report!',
       text: 'Dr, Emergency!',
       icon: 'warning',
     });
-  } else if (chloValue <= 94 || chloValue >= 115) {
+  } else if (inr > 1) {
     swal({
       title: 'Patient X Report!',
       text: 'Dr, Emergency!',
@@ -43,19 +43,19 @@ function validate() {
       text: 'Dr, Emergency!',
       icon: 'warning',
     });
-  } else if (urValue <= 1.0 || urValue >= 7.5) {
+  } else if (urValue <= 2.0 || urValue >= 7.5) {
     swal({
       title: 'Patient X Report!',
       text: 'Dr, Emergency!',
       icon: 'warning',
     });
-  } else if (creValue <= 50 || creValue >= 351) {
+  } else if (creValue <= 40 || creValue > 106) {
     swal({
       title: 'Patient X Report!',
       text: 'Dr, Emergency!',
       icon: 'warning',
     });
-  } else if (hbValue <= 9) {
+  } else if (hbValue < 11) {
     swal({
       title: 'Patient X Report!',
       text: 'Dr, Emergency!',
@@ -69,5 +69,5 @@ function validate() {
     });
   }
 
-  document.getElementById('rep-form').reset();
+  //document.getElementById('rep-form').reset();
 }
